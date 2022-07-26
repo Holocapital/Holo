@@ -85,10 +85,7 @@ interface IFundingCycles {
 
     function MAX_CYCLE_LIMIT() external view returns (uint256);
 
-    function get(uint256 _fundingCycleId)
-        external
-        view
-        returns (FundingCycle memory);
+  
 
     function queuedOf(uint256 _projectId)
         external
@@ -99,7 +96,10 @@ interface IFundingCycles {
         external
         view
         returns (FundingCycle memory);
-
+    function get(uint256 _fundingCycleId)
+        external
+        view
+        returns (FundingCycle memory);
     function currentBallotStateOf(uint256 _projectId)
         external
         view
